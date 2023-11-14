@@ -12,12 +12,24 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style>
+     .container{
+         display: flex;
+     }
+     .col{
+         flex: 1;
+     }
+    </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        <section data-markdown="markdown.md"
+                 data-separator="^---"
+                 data-separator-vertical="^--"
+                 data-separator-notes="^Note:"
+                 >
+        </section>
 			</div>
 		</div>
 
@@ -30,7 +42,9 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
+        controls: false,
 				hash: true,
+        slideNumber: "c/t",
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
